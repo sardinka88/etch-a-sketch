@@ -14,4 +14,14 @@ const generateGrid = (squareSize, numSquares) => {
   }
 };
 
-generateGrid(30, 20);
+generateGrid(20, 30);
+
+const grid = document.querySelectorAll(".square");
+
+const setActive = (event) => {
+  event.target.classList.add("active");
+};
+
+grid.forEach((square) => {
+  square.addEventListener("mouseover", setActive);
+});
