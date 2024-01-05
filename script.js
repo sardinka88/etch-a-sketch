@@ -18,6 +18,24 @@ generateGrid(20, 30);
 
 const grid = document.querySelectorAll(".square");
 
-const setActive = (event) => event.target.classList.add("active");
+// Event Handling
 
+// track if mouse is pressed down
+let isMouseDown = false;
+
+document.addEventListener("mousedown", () => {
+  isMouseDown = true;
+});
+
+document.addEventListener("mouseup", () => {
+  isMouseDown = false;
+});
+
+// if mouse is pressed down - apply the active class to a square
+const setActive = (event) => {
+  if (isMouseDown) event.target.classList.add("active");
+};
+
+// add mouseover event listener to all squares - sets the active class ONLY
+// if mouse is pressed down
 grid.forEach((square) => square.addEventListener("mouseover", setActive));
