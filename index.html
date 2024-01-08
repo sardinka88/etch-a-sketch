@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <header>
+      <h1>ETCH-A-SKETCH</h1>
+      <input id="grid-size" name="grid-size" type="number" max="100">
+      <label for="grid-size">Select the grid size (X * X)</label>
+      <br>
+      <button class="select-grid-size">Generate Grid</button>
+      <br>
+      <input id="color" name="color" type="color">
+      <label for="color">Select drawing color</label>
+      <br>
+      <button class="select-color">Confirm color</button>
+      <br>
+      <button class="reset">RESET ALL</button>
+    </header>
     <div class="container">
       <div class="grid"></div>
     </div>
