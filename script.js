@@ -22,17 +22,13 @@ const grid = document.querySelectorAll(".square");
 
 // Event Handling
 
-// track if mouse is pressed down
+// track if mouse is clicked
 let isMouseClicked = false;
 
 gridContainer.addEventListener("click", () => {
   if (isMouseClicked === false) isMouseClicked = true;
   else isMouseClicked = false;
 });
-
-// document.addEventListener("mouseup", () => {
-//   isMouseDown = false;
-// });
 
 // if mouse is pressed down - apply the active class to a square
 const setActive = (event) => {
