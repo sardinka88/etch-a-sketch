@@ -26,9 +26,9 @@ const setColor = (newColor) => {
 
 
 // define a function that creates a grid of X by X squares
-const generateGrid = (squareSize, numSquares = 30) => {
+const generateGrid = (numSquares = 30) => {
+  const squareSize = 960 / numSquares;
   resetGrid();
-  gridContainer.style.width = `${squareSize * numSquares}px`;
   for (let i = 0; i < numSquares; i++) {
     for (let j = 0; j < numSquares; j++) {
       const square = document.createElement("div");
@@ -44,7 +44,7 @@ const generateGrid = (squareSize, numSquares = 30) => {
 };
 
 confirmSizeButton.addEventListener('click', () => setGridSize(sizeSelector.value));
-confirmSizeButton.addEventListener('click', () => generateGrid(20, gridSize));
+confirmSizeButton.addEventListener('click', () => generateGrid(gridSize));
 
 selectColorButton.addEventListener('click', ()=> setColor(colorSelector.value));
 
